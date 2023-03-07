@@ -1,14 +1,67 @@
-
-
-
-.swiper-button-prev, .swiper-button-next {
+/*Banner slider*/
+.swiperBannerHome .swiper-button-prev {
     display: none !important;
 }
 
-.btn-slider:hover .icon-arrow-slider {
-    transform: translateX(5px)
+.swiperBannerHome .swiper-button-next {
+    display: none !important;
 }
 
+/*Img Slider News*/
+
+.imgNewSlide:hover .swiper-button-next {
+    display: flex !important;
+}
+
+.imgNewSlide:hover .swiper-button-prev {
+    display: flex !important;
+}
+
+.imgNewSlide .swiper-button-next {
+    right: 0 !important;
+    top: 200px !important;
+    background-color: #000 !important;
+    padding: 20px !important;
+    opacity: 0.5 !important;
+    display: none !important;
+    transition: all 0.2s linear !important;
+}
+
+.imgNewSlide .swiper-button-next:after {
+    font-size: 16px !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+}
+
+.imgNewSlide .swiper-button-next:hover {
+    background: #e40613 !important;
+    opacity: 1 !important;
+}
+
+.imgNewSlide .swiper-button-prev {
+    left: 0 !important;
+    top: 200px !important;
+    background-color: #000 !important;
+    padding: 20px !important;
+    opacity: 0.5 !important;
+    display: none !important;
+    transition: all 0.2s linear !important;
+}
+
+.imgNewSlide .swiper-button-prev:after {
+    font-size: 16px !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+}
+
+.imgNewSlide .swiper-button-prev:hover {
+    background: #e40613 !important;
+    opacity: 1 !important;
+}
+
+.btn-slider:hover .icon-arrow-slider {
+    transform: translateX(5px);
+}
 
 .title-item-service-home {
     background-image: url(../src/lib/image/iconServiceHome1.png);
@@ -21,24 +74,28 @@
     font-size: 16px;
 }
 
-.item-service-home:hover .title-item-service-home  {
+.item-service-home:hover .title-item-service-home {
     background-image: url(../src/lib/image/iconServiceHome.png);
 }
 
 .item-service-home:hover .btn-item-service-home {
-    color: #638FFF;
+    color: #638fff;
 }
 
 .iconArrowApplication {
-    color: #777E90
+    color: #777e90;
 }
 
 .itemApplicationHome:hover svg path {
-    fill: #E40613;
+    fill: #e40613;
 }
 
 .itemApplicationHome:hover .img svg path {
-fill: white
+    fill: white;
 }
 
+/*Input Home*/
 
+.itemForm:hover {
+    border-bottom: 1px solid #e40613;
+}

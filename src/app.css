@@ -13,4 +13,14 @@
     @apply bg-primary text-white font-medium text-sm
 }
 
+.itemForm {
+    @apply flex border-b-[1px] border-gray-300 py-3
+}
 
+.iconFormImg {
+    @apply w-[24px] h-[24px] mr-2
+}
+
+.itemFormInput {
+    @apply w-full bg-transparent outline-0 text-white 
+}
