@@ -1,5 +1,5 @@
- <!-- Begin: Application Industry -->
- <div class="mb-[94px]">
+<!-- Begin: Application Industry -->
+<div class="mb-[94px]">
     <h1 class="font-extrabold text-4xl py-[70px] text-center text-black uppercase">Sản phẩm</h1>
     <div class="max-w-screen-main mx-auto px-4">
         <div class="grid grid-cols-12 gap-7">

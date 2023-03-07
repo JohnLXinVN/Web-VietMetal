@@ -30,14 +30,105 @@
     import iconChat from '$lib/image/iconChat.png';
     import iconBusiness from '$lib/image/iconBusiness.png';
     import iconBox from '$lib/image/iconBox.png';
+    import imgMap from '$lib/image/imgMap.png';
+    import imgCommaTop from '$lib/image/commaTop.png';
+    import imgCommaBottom from '$lib/image/commaBottom.png';
 
-    import SliderHome from '$lib/components/SliderHome.svelte';
-    import MapHome from '$lib/components/MapHome.svelte';
-    import ApplicationHome from '$lib/components/ApplicationHome.svelte';
+    import AplicationHome from '$lib/components/AplicationHome.svelte'
 </script>
 
 <section>
-    <SliderHome />
+    <!-- Begin: Slider -->
+    <div class="h-[720px] w-auto ">
+        <Swiper
+            grabCursor={true}
+            spaceBetween={0}
+            centeredSlides={true}
+            autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+            }}
+            pagination={{
+                clickable: true,
+            }}
+            loop={true}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            class="swiperBannerHome"
+        >
+            <SwiperSlide class="w-full h-[720px]">
+                <div class="bg-[url('$lib/image/imgSlider1.png')] h-[720px] w-full bg-no-repeat bg-center bg-cover">
+                    <div class="h-full flex flex-col items-center justify-center max-md:p-6 max-w-[1000px] mx-auto">
+                        <h1 class="font-black text-5xl text-white items-center flex justify-center text-center uppercase leading-[55px]">
+                            Kiến tạo Công Nghiệp<br /> & Chinh phục niềm tin Khách Hàng
+                        </h1>
+                        <h2 class="mt-7 text-white font-bold text-base text-center">
+                            Trong suốt thời gian qua, chúng tôi được sự tin tưởng từ những nhà cung cấp lẫn khách hàng và không ngừng phát
+                            tiển để trở thành nhà cung cấp thép hàng đầu tại Việt Nam
+                        </h2>
+                        <button class="btn-primary flex uppercase mt-11 hover:bg-[#b0161f] transition-all  px-5 py-4 btn-slider">
+                            <span>Xem catalouge</span>
+                            <span class="ml-[17px] pl-[14px] border-l-[1px] border-gray-100 ">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon-arrow-slider transition-all"
+                                >
+                                    <g clip-path="url(#clip0_1092_736)">
+                                        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1092_736">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span></button
+                        >
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide class="w-full h-[720px]">
+                <div class="bg-[url('$lib/image/imgSlider2.png')] h-[720px] w-full bg-no-repeat bg-center bg-cover">
+                    <div class="h-full flex flex-col items-center justify-center max-md:p-6 max-w-[1000px] mx-auto">
+                        <h1 class="font-black text-5xl text-white items-center flex justify-center text-center uppercase leading-[55px]">
+                            Kiến tạo Công Nghiệp<br /> & Chinh phục niềm tin Khách Hàng
+                        </h1>
+                        <h2 class="mt-7 text-white font-bold text-base text-center">
+                            Trong suốt thời gian qua, chúng tôi được sự tin tưởng từ những nhà cung cấp lẫn khách hàng và không ngừng phát
+                            tiển để trở thành nhà cung cấp thép hàng đầu tại Việt Nam
+                        </h2>
+                        <button class="btn-primary flex uppercase mt-11 hover:bg-[#b0161f] transition-all  px-5 py-4 btn-slider">
+                            <span>Xem catalouge</span>
+                            <span class="ml-[17px] pl-[14px] border-l-[1px] border-gray-100 ">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon-arrow-slider transition-all"
+                                >
+                                    <g clip-path="url(#clip0_1092_736)">
+                                        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1092_736">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span></button
+                        >
+                    </div>
+                </div>
+            </SwiperSlide>
+        </Swiper>
+    </div>
+    <!-- End: Slider -->
 
     <!-- Begin: About -->
     <div class="relative">
@@ -291,9 +382,91 @@
     </div>
     <!-- End: Product -->
 
-    <ApplicationHome />
+    <AplicationHome />
 
-    <MapHome />
+    <!-- Begin: Map -->
+    <div class="bg-[#F3F5F8] py-[94px]">
+        <div class="max-w-screen-main mx-auto px-4 grid grid-cols-12 gap-2">
+            <div class="col-span-7">
+                <img src={imgMap} alt="" />
+            </div>
+            <div class="col-span-5">
+                <div class="bg-bluePrimary font-semibold text-lg text-white p-7 relative">
+                    Công ty Cổ Phần Kim Khí Việt tự hào khi có mạng lưới hệ thống nhập khẩu đa dạng để phục vụ các khách hàng sản xuất trong
+                    và ngoài nước. Trong suốt thời gian qua, chúng tôi được sự tin tưởng từ những nhà cung cấp lẫn khách hàng và không ngừng
+                    phát tiển để trở thành công ty phân phối thép hàng đầu Việt Nam.
+                    <img src={imgCommaTop} alt="" class="absolute top-[-20px] left-[30px] w-[35px] h-[40px]" />
+                    <img src={imgCommaBottom} alt="" class="absolute bottom-[-20px] right-[30px] w-[35px] h-[40px]" />
+                </div>
+                <div class="mt-[50px] grid grid-row-5 gap-1 text-[#353945]">
+                    <div class="row-span-1 grid grid-cols-2 mt-2">
+                        <div class="col-span-1 flex">
+                            <div class="w-[14px] h-[14px] mt-2 bg-[#E40613] mr-3 rounded-full" />
+                            <p>
+                                Novolipetsk <br />
+                                MMK <br />
+                                Servestal
+                            </p>
+                        </div>
+                        <div class="col-span-1 flex">
+                            <div class="w-[14px] h-[14px] mt-2 bg-[#511B00] mr-3 rounded-full" />
+                            <p>
+                                POSCO <br />
+                                Dongbu <br />
+                                Huyndai Steel
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row-span-1 grid grid-cols-2 mt-2">
+                        <div class="col-span-1 grid grid-rows-2">
+                            <div class="flex row-span-1">
+                                <div class=" w-[14px] h-[14px] mt-2 bg-[#FF5512] mr-3 rounded-full flex items-center" />
+                                <p>ArcelorMittan</p>
+                            </div>
+                            <div class="flex row-span-1">
+                                <div class=" w-[14px] h-[14px] mt-2 bg-[#FFB000] mr-3 rounded-full flex items-center" />
+                                <p>
+                                    FMS<br />
+                                    Hoa Phat
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-span-1 flex ">
+                            <div class="w-[14px] h-[14px] mt-2 bg-[#511B00] mr-3 rounded-full flex items-center" />
+                            <p>
+                                R&K Trading<br />
+                                Kobe Steel<br />
+                                Nippon Steel<br />
+                                JFE
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row-span-1 grid grid-cols-2 mt-2">
+                        <div class="col-span-1 flex">
+                            <div class="w-[14px] h-[14px] mt-2 bg-[#00D172] mr-3 rounded-full flex items-center" />
+                            <p>BlueScope Steel</p>
+                        </div>
+                        <div class="col-span-1 flex ">
+                            <div class="w-[14px] h-[14px] mt-2 bg-[#DD10C0] mr-3 rounded-full flex items-center" />
+                            <p>Chunghung <br /> CSC <br /> Shang Hsing</p>
+                        </div>
+                    </div>
+                    <div class="row-span-1 grid grid-cols-1 mt-2">
+                        <div class="col-span-1 flex">
+                            <div class="w-[14px] h-[14px] mt-2 bg-[#322783] mr-3 rounded-full flex items-center" />
+                            <p>
+                                HBIS Group<br />
+                                Baosteel<br />
+                                Xi Wang Group<br />
+                                Zhejiang Huada New Materials
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Map -->
 
     <!-- Begin: News Home -->
     <div class="max-w-screen-main mx-auto px-4 py-16">
@@ -400,39 +573,41 @@
             <h1 class="mb-12 font-extrabold text-4xl text-white flex items-center justify-center">Bản chào hàng</h1>
             <form action="" method="post" class="grid grid-cols-12 gap-7">
                 <div class="col-span-4 itemForm">
-                    <img src={iconUser} alt="" class="iconFormImg"/>
-                    <input type="text" placeholder="Tên người liên lạc" class="itemFormInput" required/>
+                    <img src={iconUser} alt="" class="iconFormImg" />
+                    <input type="text" placeholder="Tên người liên lạc" class="itemFormInput" required />
                 </div>
                 <div class="col-span-4 itemForm">
                     <img src={iconBusiness} alt="" class="iconFormImg" />
-                    <input type="text" placeholder="Tên công ty" class="itemFormInput" required/>
+                    <input type="text" placeholder="Tên công ty" class="itemFormInput" required />
                 </div>
                 <div class="col-span-4 itemForm">
                     <img src={iconBusiness} alt="" class="iconFormImg" />
-                    <input type="text" placeholder="Tên nghề" class="itemFormInput" required/>
+                    <input type="text" placeholder="Tên nghề" class="itemFormInput" required />
                 </div>
                 <div class="col-span-6 itemForm">
                     <img src={iconEmail} alt="" class="iconFormImg" />
-                    <input type="text" placeholder="Địa chỉ email" class="itemFormInput" required/>
+                    <input type="text" placeholder="Địa chỉ email" class="itemFormInput" required />
                 </div>
                 <div class="col-span-6 itemForm">
                     <img src={iconBox} alt="" class="iconFormImg" />
-                    <input type="text" placeholder="Sản phẩm" class="itemFormInput" required/>
+                    <input type="text" placeholder="Sản phẩm" class="itemFormInput" required />
                 </div>
                 <div class="col-span-6 itemForm">
                     <img src={IconRuler} alt="" class="iconFormImg" />
-                    <input type="text" placeholder="Độ dày" class="itemFormInput" required/>
+                    <input type="text" placeholder="Độ dày" class="itemFormInput" required />
                 </div>
                 <div class="col-span-6 itemForm">
                     <img src={IconRuler} alt="" class="iconFormImg" />
-                    <input type="text" placeholder="Chiều rộng" class="itemFormInput" required/>
+                    <input type="text" placeholder="Chiều rộng" class="itemFormInput" required />
                 </div>
                 <div class="col-span-12 itemForm">
                     <img src={iconChat} alt="" class="iconFormImg" />
-                    <input type="text" placeholder="Yêu cầu đặc biệt khác" class="itemFormInput" required/>
+                    <input type="text" placeholder="Yêu cầu đặc biệt khác" class="itemFormInput" required />
                 </div>
 
-                <div class=" flex justify-center items-center  col-span-12 mt-12"><button type="submit" class="btn-primary font-semibold text-sm uppercase py-4 px-9 w-fit">Gửi yêu cầu</button></div>
+                <div class=" flex justify-center items-center  col-span-12 mt-12">
+                    <button type="submit" class="btn-primary font-semibold text-sm uppercase py-4 px-9 w-fit">Gửi yêu cầu</button>
+                </div>
             </form>
         </div>
     </div>

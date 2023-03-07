@@ -1,7 +1,7 @@
 <script>
-    // @ts-nocheck
-
-    import { on } from 'dom7';
+    
+    // @ts-nocheck  
+    import { page } from '$app/stores';
     import iconLogo from '$lib/image/logo.png';
     import iconLogoColor from '$lib/image/logoColor.png';
     import iconSearch from '$lib/image/Searchiconsearch.png';
@@ -34,19 +34,23 @@
         return handleFixed;
     };
     $: handleFixed = handleScroll(topY);
+    
+
+    $: pathName = $page.url.pathname
+    
 </script>
 
 <svelte:window on:scroll={scrollFunc} />
 
 <section
-    class={handleFixed
+    class={handleFixed || pathName !== ""
         ? 'top-0 z-50 left-0 right-0 transition-all fixed bg-white text-black'
         : 'top-0 z-10 left-0 right-0 transition-all absolute text-white'}
 >
     <div class="max-w-screen-main mx-auto px-4 ">
         <div class="border-b-[1px] border-gray-100  flex items-center justify-between ">
             <div class="">
-                {#if handleFixed}
+                {#if handleFixed || pathName !== ""}
                     <img src={iconLogoColor} alt="" />
                 {:else}
                     <img src={iconLogo} alt="" />
@@ -59,7 +63,7 @@
                     <a href="/" class="px-4 py-3 font-bold text-sm leading-3">Liên hệ</a>
 
                     <div class="px-4 py-3 font-bold text-sm leading-3 border-x-[1px] border-gray-100">
-                        {#if handleFixed}
+                        {#if handleFixed || pathName !== ""}
                             <svg
                                 width="20"
                                 height="20"
@@ -115,12 +119,12 @@
                     </div>
                 </div>
                 <div class="leading-3 border-t-[1px] border-gray-100">
-                    <a href="/" class="inline-block p-5 font-bold text-sm relative itemNavActive">Trang chủ</a>
-                    <a href="/" class="inline-block p-5 font-bold text-sm relative">Về chúng tôi</a>
-                    <a href="/" class="inline-block p-5 font-bold text-sm relative">Dịch vụ</a>
-                    <a href="/" class="inline-block p-5 font-bold text-sm relative">Sản phẩm</a>
-                    <a href="/" class="inline-block p-5 font-bold text-sm relative">Ngành ứng dụng</a>
-                    <a href="/" class="inline-block p-5 font-bold text-sm relative">Dự án</a>
+                    <a href="/" class={pathName === "" ? "inline-block p-5 font-bold text-sm relative itemNavActive" : "inline-block p-5 font-bold text-sm relative"}>Trang chủ</a>
+                    <a href="/" class={pathName === "/about" ? "inline-block p-5 font-bold text-sm relative itemNavActive" : "inline-block p-5 font-bold text-sm relative"}>Về chúng tôi</a>
+                    <a href="/" class={pathName === "/service" ? "inline-block p-5 font-bold text-sm relative itemNavActive" : "inline-block p-5 font-bold text-sm relative"}>Dịch vụ</a>
+                    <a href="/" class={pathName === "/product" ? "inline-block p-5 font-bold text-sm relative itemNavActive" : "inline-block p-5 font-bold text-sm relative"}>Sản phẩm</a>
+                    <a href="/" class={pathName === "/application-industry" ? "inline-block p-5 font-bold text-sm relative itemNavActive" : "inline-block p-5 font-bold text-sm relative"}>Ngành ứng dụng</a>
+                    <a href="/" class={pathName === "/project" ? "inline-block p-5 font-bold text-sm relative itemNavActive" : "inline-block p-5 font-bold text-sm relative"}>Dự án</a>
                 </div>
             </div>
         </div>
